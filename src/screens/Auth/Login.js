@@ -43,9 +43,11 @@ export default function Login({ navigation }) {
         } else {
             setPasswordError('');
         }
-        console.log("adadadaa")
-        if (userName == 'Thanhln123@gmail.com' && pass == '123456') {
+        if (userName == 'thien' && pass == '123456') {
+            
             return navigation.navigate('HomeNav')
+        }else {
+            alert("Wrong username or password")
         }
     });
 

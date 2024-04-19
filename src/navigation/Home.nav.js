@@ -88,6 +88,7 @@ const HomeNav = React.memo(() => {
                                 paddingTop: 20,
                                 backgroundColor: Color.colorGhostwhite
                             }),
+                            backgroundColor: Color.colorGhostwhite,
                             display: getTabBarVisible(route),
                         }
                     };

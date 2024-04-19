@@ -18,6 +18,7 @@ import {
     Logout,
     ArrowRight2,
 } from "iconsax-react-native";
+import Button from "../../components/Button";
 
 const settingsData = [
     { icon: <User size="17" color={Color.colorGray_100} />, text: "Edit Profile", onPress: "EditProfile" },
@@ -62,6 +63,10 @@ const ProfileSetting = ({ navigation }) => {
                         {settingsData.map((item, index) => (
                             <SettingsItem key={index} icon={item.icon} text={item.text} onPress={() => navigateTo(item.onPress)} />
                         ))}
+                        <Button style={{
+                            width: wp(80)
+                        }} title = {"Log out"} onPress={() => navigation.navigate('Login')}/>
+
                     </View>
                 </View>
             </Container>
@@ -76,6 +81,7 @@ const SettingsItem = ({ icon, text, onPress }) => (
                 {icon}
                 <Text style={[styles.tIcon, { marginLeft: 15 }]}>{text}</Text>
             </View>
+
             <ArrowRight2 size="17" color={Color.colorGray_100} variant="Outline" />
         </RowComponent>
     </Pressable>
